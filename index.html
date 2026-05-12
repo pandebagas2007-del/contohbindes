@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Muncan — Karangasem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+    <div class="nav-brand">
+        <span class="brand-icon">⛩</span>
+        <span>Muncan</span>
+    </div>
+    <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#wisata">Wisata</a>
+        <a href="#denah">Denah</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#" class="btn-admin" onclick="openAdminPanel(event)">Admin ↗</a>
+    </div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMobileMenu()">Beranda</a>
+    <a href="#wisata" onclick="closeMobileMenu()">Wisata</a>
+    <a href="#denah" onclick="closeMobileMenu()">Denah</a>
+    <a href="#galeri" onclick="closeMobileMenu()">Galeri</a>
+    <a href="#" onclick="openAdminPanel(event);closeMobileMenu()">Admin</a>
+</div>
+
+<!-- HERO -->
+<header id="home">
+    <video autoplay muted loop playsinline>
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-tagline" data-aos="fade-up">Karangasem · Bali</p>
+        <h1 data-aos="fade-up" data-aos-delay="120">
+            <span>Desa</span><br><em>Muncan</em>
+        </h1>
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="240">Ketenangan alam, kekayaan budaya, dan pesona<br>yang tak terlupakan di jantung Karangasem.</p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="360">
+            <a href="#wisata" class="btn-primary">Jelajahi Desa</a>
+            <a href="#denah" class="btn-ghost">Lihat Denah</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+    <div class="hero-stats" data-aos="fade-left" data-aos-delay="500">
+        <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Destinasi</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">∞</span><span class="stat-label">Kenangan</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">1</span><span class="stat-label">Desa</span></div>
+    </div>
+</header>
+
+<!-- WISATA -->
+<section id="wisata">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-label">— Destinasi</span>
+        <h2>Tempat Wisata<br><em>Desa Muncan</em></h2>
+        <p>Temukan keindahan tersembunyi yang menanti setiap pengunjung</p>
+    </div>
+    <div class="wisata-grid">
+        <div class="wisata-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="wisata-img-wrap">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Joging Track">
+                <div class="wisata-badge">Alam</div>
+            </div>
+            <div class="wisata-body">
+                <h3>Joging Track</h3>
+                <p>Jalur joging dengan panorama alam hijau yang menyejukkan, dikelilingi pepohonan rindang dan udara segar pegunungan Bali.</p>
+                <div class="wisata-map">
+                    <div class="map-label"><span>📍</span> Lokasi di Peta</div>
+                    <iframe src="https://maps.google.com/maps?q=kuta+bali&output=embed" title="Peta" loading="lazy"></iframe>
+                </div>
+                <a href="#" class="wisata-link">Selengkapnya →</a>
+            </div>
+        </div>
+        <div class="wisata-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="wisata-img-wrap">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800" alt="Penglukatan">
+                <div class="wisata-badge spiritual">Spiritual</div>
+            </div>
+            <div class="wisata-body">
+                <h3>Penglukatan</h3>
+                <p>Ritual penyucian diri dari energi negatif melalui tradisi suci Bali. Rasakan ketenangan batin yang mendalam.</p>
+                <div class="wisata-map">
+                    <div class="map-label"><span>📍</span> Lokasi di Peta</div>
+                    <iframe src="https://maps.google.com/maps?q=tegallalang+bali&output=embed" title="Peta" loading="lazy"></iframe>
+                </div>
+                <a href="#" class="wisata-link">Selengkapnya →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DENAH DESA -->
+<section id="denah">
+    <div class="denah-bg-decor"></div>
+    <div class="section-header light" data-aos="fade-up">
+        <span class="section-label light">— Tata Wilayah</span>
+        <h2>Denah<br><em>Desa Muncan</em></h2>
+        <p>Peta dan denah resmi wilayah Desa Muncan, Kecamatan Selat, Karangasem</p>
+    </div>
+
+    <!-- Tampilan publik -->
+    <div class="denah-public" data-aos="fade-up" data-aos-delay="100">
+        <div class="denah-frame">
+            <div class="denah-empty" id="denahEmpty">
+                <div class="denah-empty-icon">🗺️</div>
+                <h3>Denah Belum Tersedia</h3>
+                <p>Denah desa sedang dalam proses pembaruan.<br>Silakan kunjungi kembali nanti.</p>
+            </div>
+            <div class="denah-loaded" id="denahLoaded" style="display:none;">
+                <img id="denahPublicImg" src="" alt="Denah Desa Muncan">
+                <div class="denah-img-actions">
+                    <button onclick="zoomDenah()" class="denah-action-btn">🔍 Perbesar</button>
+                    <button onclick="downloadDenah()" class="denah-action-btn">⬇ Unduh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-strip" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-chip"><span class="chip-icon">🏡</span><div><strong>Desa Muncan</strong><small>Nama Desa</small></div></div>
+        <div class="info-chip"><span class="chip-icon">📍</span><div><strong>Kec. Selat</strong><small>Kecamatan</small></div></div>
+        <div class="info-chip"><span class="chip-icon">🗺️</span><div><strong>Karangasem</strong><small>Kabupaten</small></div></div>
+        <div class="info-chip"><span class="chip-icon">🌿</span><div><strong>Desa Wisata</strong><small>Status</small></div></div>
+    </div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-label">— Visual</span>
+        <h2>Galeri<br><em>Keindahan Desa</em></h2>
+        <p>Potret kehidupan dan alam Desa Muncan</p>
+    </div>
+    <div class="gallery-masonry" data-aos="fade-up" data-aos-delay="100">
+        <div class="gal-item tall" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Galeri 1">
+            <div class="gal-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gal-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a8?w=600" alt="Galeri 2">
+            <div class="gal-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gal-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1526779259212-756e0e85b1c9?w=600" alt="Galeri 3">
+            <div class="gal-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gal-item wide" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" alt="Galeri 4">
+            <div class="gal-overlay"><span>🔍</span></div>
+        </div>
+        <div class="gal-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600" alt="Galeri 5">
+            <div class="gal-overlay"><span>🔍</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close">✕</button>
+    <img id="lightboxImg" src="" alt="Preview">
+</div>
+
+<!-- DENAH ZOOM MODAL -->
+<div class="lightbox" id="denahZoom" onclick="this.classList.remove('open');document.body.style.overflow='';">
+    <button class="lightbox-close">✕</button>
+    <img id="denahZoomImg" src="" alt="Denah Besar">
+</div>
+
+<!-- ══════ ADMIN PANEL MODAL ══════ -->
+<div class="modal-overlay" id="adminOverlay" onclick="closeAdminPanel(event)">
+    <div class="modal-box" id="adminBox">
+
+        <!-- LOGIN -->
+        <div id="loginPanel">
+            <div class="modal-header">
+                <div class="modal-icon">🔐</div>
+                <h3>Admin Login</h3>
+                <p>Masuk untuk mengelola konten desa</p>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="adminUser" placeholder="Username" autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-pw-wrap">
+                        <input type="password" id="adminPass" placeholder="Password" autocomplete="current-password"
+                               onkeydown="if(event.key==='Enter')doLogin()">
+                        <button class="toggle-pw" type="button" onclick="togglePassword()">👁</button>
+                    </div>
+                </div>
+                <div class="login-error" id="loginError"></div>
+                <button class="btn-modal-primary" onclick="doLogin()">Masuk →</button>
+                <p class="modal-note">⚠️ Akses terbatas untuk pengelola desa</p>
+            </div>
+        </div>
+
+        <!-- DASHBOARD ADMIN -->
+        <div id="adminPanel" style="display:none;">
+            <div class="modal-header">
+                <div class="modal-icon">🛠️</div>
+                <h3>Panel Admin</h3>
+                <p id="adminWelcome">Selamat datang!</p>
+            </div>
+            <div class="modal-body">
+
+                <div class="admin-section">
+                    <h4>📌 Upload Denah Desa</h4>
+                    <div class="upload-zone" id="uploadZone"
+                         ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)"
+                         onclick="document.getElementById('adminFileInput').click()">
+                        <div class="upload-zone-icon">🗺️</div>
+                        <p><strong>Klik atau seret file ke sini</strong></p>
+                        <small>JPG, PNG, WebP — Maks. 10MB</small>
+                        <input type="file" id="adminFileInput" accept="image/*" style="display:none;" onchange="previewAdminFile(event)">
+                    </div>
+
+                    <div class="upload-preview" id="uploadPreview" style="display:none;">
+                        <img id="uploadPreviewImg" src="" alt="Preview">
+                        <p id="uploadPreviewInfo" class="preview-info"></p>
+                        <div class="upload-preview-actions">
+                            <button class="btn-modal-primary" onclick="uploadDenah()">⬆ Upload ke Server</button>
+                            <button class="btn-modal-secondary" onclick="cancelPreview()">✕ Batal</button>
+                        </div>
+                    </div>
+
+                    <div class="upload-progress" id="uploadProgress" style="display:none;">
+                        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+                        <p id="progressText">Mengunggah...</p>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h4>📋 Denah Aktif</h4>
+                    <div id="currentDenahInfo">
+                        <p class="no-denah-text">Belum ada denah yang diupload.</p>
+                    </div>
+                </div>
+
+                <button class="btn-logout" onclick="doLogout()">🚪 Keluar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand"><span class="brand-icon">⛩</span><span>Desa Muncan</span></div>
+        <p>Kec. Selat · Kab. Karangasem · Bali · Indonesia</p>
+        <p class="footer-copy">© 2026 Desa Muncan. Hak cipta dilindungi.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
